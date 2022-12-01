@@ -4,7 +4,7 @@ import re
 from coleta import coleta_pb2 as Coleta
 
 from headers_keys import (
-    HEADERS, REM_BASICA, REM_EVENTUAL, OBRIGATORIOS, VERBAS, TEMPORARIAS)
+    HEADERS, REM_BASICA, REM_EVENTUAL, OBRIGATORIOS, VERBAS, TEMPORARIAS, VERBAS_06_20, TEMPORARIAS_06_20, TEMPORARIAS_07_20)
 
 
 def parse_employees(file, colect_key, month, year):
@@ -87,7 +87,42 @@ def remunerations_after(row):
         remuneration.tipo_receita = Coleta.Remuneracao.TipoReceita.Value("O")
         remuneration_array.remuneracao.append(remuneration)
     # OUTRAS REMUNERAÇÕES TEMPORÁRIAS
-    for key, value in HEADERS[TEMPORARIAS].items():
+    try:
+        for key, value in HEADERS[TEMPORARIAS].items():
+            remuneration = Coleta.Remuneracao()
+            remuneration.natureza = Coleta.Remuneracao.Natureza.Value("R")
+            remuneration.categoria = TEMPORARIAS
+            remuneration.item = key
+            remuneration.valor = float(number.format_value(row[value]))
+            remuneration.tipo_receita = Coleta.Remuneracao.TipoReceita.Value(
+                "O")
+            remuneration_array.remuneracao.append(remuneration)
+    except:
+        for key, value in HEADERS[TEMPORARIAS_07_20].items():
+            remuneration = Coleta.Remuneracao()
+            remuneration.natureza = Coleta.Remuneracao.Natureza.Value("R")
+            remuneration.categoria = TEMPORARIAS
+            remuneration.item = key
+            remuneration.valor = float(number.format_value(row[value]))
+            remuneration.tipo_receita = Coleta.Remuneracao.TipoReceita.Value(
+                "O")
+            remuneration_array.remuneracao.append(remuneration)
+    return remuneration_array
+
+
+def remunerations_06_20(row):
+    remuneration_array = Coleta.Remuneracoes()
+    # VERBAS INDENIZATÓRIAS
+    for key, value in HEADERS[VERBAS_06_20].items():
+        remuneration = Coleta.Remuneracao()
+        remuneration.natureza = Coleta.Remuneracao.Natureza.Value("R")
+        remuneration.categoria = VERBAS
+        remuneration.item = key
+        remuneration.valor = float(number.format_value(row[value]))
+        remuneration.tipo_receita = Coleta.Remuneracao.TipoReceita.Value("O")
+        remuneration_array.remuneracao.append(remuneration)
+    # OUTRAS REMUNERAÇÕES TEMPORÁRIAS
+    for key, value in HEADERS[TEMPORARIAS_06_20].items():
         remuneration = Coleta.Remuneracao()
         remuneration.natureza = Coleta.Remuneracao.Natureza.Value("R")
         remuneration.categoria = TEMPORARIAS
@@ -129,13 +164,42 @@ def remunerations_before(row):
     return remuneration_array
 
 
-def update_employees_after(indenizacoes, employees):
-    for row in indenizacoes:
+def remunerations_05_20(head, row):
+    remuneration_array = Coleta.Remuneracoes()
+    for i in range(4, len(row)):
+        rem = Coleta.Remuneracao()
+        rem.natureza = Coleta.Remuneracao.Natureza.Value("R")
+        rem.categoria = "Verbas indenizatórias e outras remunerações temporárias"
+        rem.item = head[i]
+        rem.valor = float(number.format_value(row[i]))
+        rem.tipo_receita = Coleta.Remuneracao.TipoReceita.Value("O")
+        remuneration_array.remuneracao.append(rem)
+    return remuneration_array
+
+
+def update_employees_after(data, employees):
+    for row in data.indenizacoes:
         registration = str(row[0])
         if registration in employees.keys():
             new_row = [x for x in row if not number.is_nan(x)]
             emp = employees[registration]
-            remu = remunerations_after(new_row)
+            if int(data.year) == 2020 and int(data.month) == 6:
+                remu = remunerations_06_20(new_row)
+            else:
+                remu = remunerations_after(new_row)
+            emp.remuneracoes.MergeFrom(remu)
+            employees[registration] = emp
+    return employees
+
+
+def update_employees_05_20(data, employees):
+    for row in data.indenizacoes:
+        if 'Auxílio-Alimentação' in row:
+            head = row
+        registration = str(row[0])
+        if registration in employees.keys():
+            emp = employees[registration]
+            remu = remunerations_05_20(head, row)
             emp.remuneracoes.MergeFrom(remu)
             employees[registration] = emp
     return employees
@@ -164,8 +228,12 @@ def parse(data, colect_key):
 
     employees.update(parse_employees(
         data.contracheque, colect_key, data.month, data.year))
-    # update_employees_after(data.indenizacoes, employees)
-    update_employees_before(data.indenizacoes, employees)
+    if int(data.year) > 2020 or int(data.year) == 2020 and int(data.month) >= 6:
+        update_employees_after(data, employees)
+    elif int(data.year) < 2020 or int(data.year) == 2020 and int(data.month) <= 4:
+        update_employees_before(data, employees)
+    elif int(data.year) == 2020 and int(data.month) == 5:
+        update_employees_05_20(data, employees)
 
     for i in employees.values():
         payroll.contra_cheque.append(i)
