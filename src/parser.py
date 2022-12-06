@@ -18,7 +18,6 @@ def parse_employees(file, colect_key, month, year):
         # As planilhas do MPT possui células vazias (NaN) entre os dados,
         # aqui removemos essas células e deixamos apenas as informações dos membros
         new_row = [x for x in row if not number.is_nan(x)]
-
         member = Coleta.ContraCheque()
         member.id_contra_cheque = colect_key + "/" + str(counter)
         member.chave_coleta = colect_key
@@ -98,6 +97,7 @@ def remunerations_after(row):
                 "O")
             remuneration_array.remuneracao.append(remuneration)
     except:
+        # O cabeçalho da planilha de julho de 2020 tem 2 colunas a menos
         for key, value in HEADERS[TEMPORARIAS_07_20].items():
             remuneration = Coleta.Remuneracao()
             remuneration.natureza = Coleta.Remuneracao.Natureza.Value("R")
@@ -163,7 +163,6 @@ def remunerations_before(row):
         remuneration_array.remuneracao.append(rem)
     return remuneration_array
 
-
 def remunerations_05_20(head, row):
     remuneration_array = Coleta.Remuneracoes()
     for i in range(4, len(row)):
@@ -176,23 +175,21 @@ def remunerations_05_20(head, row):
         remuneration_array.remuneracao.append(rem)
     return remuneration_array
 
-
-def update_employees_after(data, employees):
-    for row in data.indenizacoes:
-        registration = str(row[0])
-        if registration in employees.keys():
-            new_row = [x for x in row if not number.is_nan(x)]
-            emp = employees[registration]
-            if int(data.year) == 2020 and int(data.month) == 6:
-                remu = remunerations_06_20(new_row)
-            else:
-                remu = remunerations_after(new_row)
-            emp.remuneracoes.MergeFrom(remu)
-            employees[registration] = emp
-    return employees
+# A planilha mantém esse formato até 05/2019
+def remunerations_2018(row):
+    remuneration_array = Coleta.Remuneracoes()
+    rem = Coleta.Remuneracao()
+    rem.natureza = Coleta.Remuneracao.Natureza.Value("R")
+    rem.categoria = row[2]
+    rem.item = row[3]
+    rem.valor = float(number.format_value(row[4]))
+    rem.tipo_receita = Coleta.Remuneracao.TipoReceita.Value("O")
+    remuneration_array.remuneracao.append(rem)
+    return remuneration_array
 
 
 def update_employees_05_20(data, employees):
+    # A planilha de indenizações de maio de 2020 é diferente dos demais meses, tendo mais de 200 colunas.
     for row in data.indenizacoes:
         if 'Auxílio-Alimentação' in row:
             head = row
@@ -202,6 +199,7 @@ def update_employees_05_20(data, employees):
             remu = remunerations_05_20(head, row)
             emp.remuneracoes.MergeFrom(remu)
             employees[registration] = emp
+            print('uhuu')
     return employees
 
 
@@ -222,18 +220,57 @@ def update_employees_before(indenizacoes, employees):
     return employees
 
 
+def update_employees_after(data, employees):
+    for row in data.indenizacoes:
+        registration = str(row[0])
+        if registration in employees.keys():
+            new_row = [x for x in row if not number.is_nan(x)]
+            emp = employees[registration]
+            if int(data.year) == 2020 and int(data.month) == 6:
+                remu = remunerations_06_20(new_row)
+            else:
+                remu = remunerations_after(new_row)
+            emp.remuneracoes.MergeFrom(remu)
+            employees[registration] = emp
+    return employees
+
+
+def update_employees_2018(data, employees):
+    for row in data:
+        if 'Observações:' in str(row[0]):
+            break
+        if not number.is_nan(row[0]):
+            # A matrícula vem juntamente ao nome, entre parênteses
+            value = re.split(r'\(', row[0])
+            registration = re.sub("[)]?", "", value[1])
+            if registration in employees.keys():
+                emp = employees[registration]
+                remu = remunerations_2018(row)
+                emp.remuneracoes.MergeFrom(remu)
+                employees[registration] = emp
+    return employees
+
+
 def parse(data, colect_key):
     employees = {}
     payroll = Coleta.FolhaDePagamento()
 
     employees.update(parse_employees(
         data.contracheque, colect_key, data.month, data.year))
-    if int(data.year) > 2020 or int(data.year) == 2020 and int(data.month) >= 6:
-        update_employees_after(data, employees)
-    elif int(data.year) < 2020 or int(data.year) == 2020 and int(data.month) <= 4:
-        update_employees_before(data, employees)
+
+    if int(data.year) == 2018 or int(data.year) == 2019 and int(data.month) <= 5:
+        update_employees_2018(data.indenizacoes[8:], employees)
+
+    elif int(data.year) == 2019 and int(data.month) > 5 or int(data.year) == 2020 and int(data.month) <= 4:
+        update_employees_before(data.indenizacoes, employees)
+
     elif int(data.year) == 2020 and int(data.month) == 5:
+        print('cheguei')
         update_employees_05_20(data, employees)
+
+    # int(data.year) > 2020 or int(data.year) == 2020 and int(data.month) >= 6
+    else:
+        update_employees_after(data, employees)
 
     for i in employees.values():
         payroll.contra_cheque.append(i)

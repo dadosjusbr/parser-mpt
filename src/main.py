@@ -1,6 +1,6 @@
 import sys
 import os
-# import metadata
+import metadata
 import data
 
 from coleta import coleta_pb2 as Coleta, IDColeta
@@ -54,8 +54,8 @@ def parse_execution(data, file_names):
     rc.folha.CopyFrom(payroll)
     rc.coleta.CopyFrom(coleta)
 
-    # mt = metadata.get(int(MONTH), int(YEAR))
-    # rc.metadados.CopyFrom(mt)
+    mt = metadata.catch(int(MONTH), int(YEAR))
+    rc.metadados.CopyFrom(mt)
 
     # Imprime a versão textual na saída padrão.
     print(text_format.MessageToString(rc), flush=True, end="")
