@@ -1,0 +1,203 @@
+{
+    "contraCheque": [
+        {
+            "idContraCheque": "mpt/07/2020/1",
+            "chaveColeta": "mpt/07/2020",
+            "nome": "ABIAEL FRANCO SANTOS",
+            "matricula": "376",
+            "funcao": "PROCURADOR REGIONAL DO TRABALHO",
+            "localTrabalho": "3º OFÍCIO GERAL DA PRT DA 15ª REGIÃO",
+            "ativo": true,
+            "remuneracoes": {
+                "remuneracao": [
+                    {
+                        "categoria": "Remuneração Básica",
+                        "item": "Remuneração do Cargo Efetivo",
+                        "valor": 35462.22
+                    },
+                    {
+                        "categoria": "Remuneração Básica",
+                        "item": "Outras Verbas Remuneratórias Legais ou Judiciais"
+                    },
+                    {
+                        "categoria": "Remuneração Eventual ou Temporária",
+                        "item": "Função de Confiança ou Cargo em Comissão"
+                    },
+                    {
+                        "categoria": "Remuneração Eventual ou Temporária",
+                        "item": "Gratificação Natalina"
+                    },
+                    {
+                        "categoria": "Remuneração Eventual ou Temporária",
+                        "item": "Férias (1/3 constitucional)"
+                    },
+                    {
+                        "categoria": "Remuneração Eventual ou Temporária",
+                        "item": "Abono de Permanência",
+                        "valor": 5834.9
+                    },
+                    {
+                        "natureza": "D",
+                        "categoria": "Obrigatórios / Legais",
+                        "item": "Contribuição Previdênciária",
+                        "valor": -5834.9
+                    },
+                    {
+                        "natureza": "D",
+                        "categoria": "Obrigatórios / Legais",
+                        "item": "Imposto de Renda",
+                        "valor": -9936.3
+                    },
+                    {
+                        "natureza": "D",
+                        "categoria": "Obrigatórios / Legais",
+                        "item": "Retenção por Teto Constitucional",
+                        "valor": -109.15
+                    },
+                    {
+                        "categoria": "Verbas Indenizatórias",
+                        "item": "Auxílio-alimentação",
+                        "valor": 910.08,
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas Indenizatórias",
+                        "item": "Auxílio-creche",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas Indenizatórias",
+                        "item": "Auxílio-moradia",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas Indenizatórias",
+                        "item": "Auxílio-natalidade",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas Indenizatórias",
+                        "item": "Auxílio-transporte",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Adicional Insalubridade",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Adicional Atividade Penosa",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Devolução IR",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Devolução Plan-Assiste",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Gratificação de Perícia e Projeto",
+                        "valor": 3940.25,
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Gratificação Encargo de Curso e Concurso",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Gratificação Exercício Cumulativo de Ofício",
+                        "valor": 27187.7,
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Gratificação Local de Trabalho",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Hora Extra",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Licença Prêmio em Pecúnia",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Outras Verbas Remuneratórias Retroativas/Temporárias",
+                        "valor": 31127.95,
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Adicional Insalubridade",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Devolução IR",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Devolução Plan-Assiste",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Gratificação de Perícia e Projeto",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Gratificação Encargo de Curso e Concurso",
+                        "valor": 3940.25,
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Gratificação Exercício Cumulativo de Ofício",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Gratificação Local de Trabalho",
+                        "valor": 27187.7,
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Licença Prêmio em Pecúnia",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Outras Verbas Remuneratórias Retroativas/Temporárias",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Outras Verbas Remuneratórias",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Substituição",
+                        "valor": 31127.95,
+                        "tipoReceita": "O"
+                    }
+                ]
+            }
+        }
+    ]
+}
