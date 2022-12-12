@@ -13,7 +13,7 @@ def catch(month, year):
     metadata.despesas = Coleta.Metadados.OpcoesDetalhamento.DETALHADO
     metadata.outras_receitas = Coleta.Metadados.OpcoesDetalhamento.DETALHADO
 
-    if year == 2020 and month in [5, 6, 7, 8] or year == 2019 and month == 6:
+    if year == 2020 and month in [5, 6, 7] or year == 2019 and month == 6:
         metadata.formato_consistente = False
     else:
         metadata.formato_consistente = True

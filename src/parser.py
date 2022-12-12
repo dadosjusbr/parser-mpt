@@ -42,7 +42,7 @@ def parse_employees(file, colect_key, month, year):
 def create_remuneration(row, month, year):
     remuneration_array = Coleta.Remuneracoes()
     # REMUNERAÇÃO BÁSICA
-    for key, value in HEADERS[REM_BASICA].items():
+    for key, value in HEADERS[REM_BASICA].items(): 
         remuneration = Coleta.Remuneracao()
         remuneration.natureza = Coleta.Remuneracao.Natureza.Value("R")
         remuneration.categoria = REM_BASICA
@@ -144,6 +144,8 @@ def remunerations_before(row):
         value = re.split(r'\(R\$', row[4])
         # value[1] recebe o valor, sem parênteses e sem 'R$'.
         value[1] = re.sub("[)]?", "", value[1])
+        # Evitando o erro 'Invalid escape character in string' nos testes
+        value[0] = re.sub("[\xa0\xa0\xa0]?", "", value[0])
         rem.item = value[0]  # value[0] contém o nome do item/verba
         rem.valor = float(number.format_value(value[1]))
         rem.tipo_receita = Coleta.Remuneracao.TipoReceita.Value("O")
@@ -199,7 +201,6 @@ def update_employees_05_20(data, employees):
             remu = remunerations_05_20(head, row)
             emp.remuneracoes.MergeFrom(remu)
             employees[registration] = emp
-            print('uhuu')
     return employees
 
 
@@ -265,7 +266,6 @@ def parse(data, colect_key):
         update_employees_before(data.indenizacoes, employees)
 
     elif int(data.year) == 2020 and int(data.month) == 5:
-        print('cheguei')
         update_employees_05_20(data, employees)
 
     # int(data.year) > 2020 or int(data.year) == 2020 and int(data.month) >= 6
