@@ -42,7 +42,7 @@ def parse_employees(file, colect_key, month, year):
 def create_remuneration(row, month, year):
     remuneration_array = Coleta.Remuneracoes()
     # REMUNERAÇÃO BÁSICA
-    for key, value in HEADERS[REM_BASICA].items(): 
+    for key, value in HEADERS[REM_BASICA].items():
         remuneration = Coleta.Remuneracao()
         remuneration.natureza = Coleta.Remuneracao.Natureza.Value("R")
         remuneration.categoria = REM_BASICA
@@ -165,6 +165,7 @@ def remunerations_before(row):
         remuneration_array.remuneracao.append(rem)
     return remuneration_array
 
+
 def remunerations_05_20(head, row):
     remuneration_array = Coleta.Remuneracoes()
     for i in range(4, len(row)):
@@ -238,9 +239,9 @@ def update_employees_after(data, employees):
 
 def update_employees_2018(data, employees):
     for row in data:
-        if 'Observações:' in str(row[0]):
+        if 'Observações:' in str(row[0]) or 'Fonte' in str(row[0]):
             break
-        if not number.is_nan(row[0]):
+        if not number.is_nan(row[0]) and 'NOME' not in row[0] and '(a)' not in row[0] and 'Nome' not in row[0]:
             # A matrícula vem juntamente ao nome, entre parênteses
             value = re.split(r'\(', row[0])
             registration = re.sub("[)]?", "", value[1])
@@ -260,7 +261,7 @@ def parse(data, colect_key):
         data.contracheque, colect_key, data.month, data.year))
 
     if int(data.year) == 2018 or int(data.year) == 2019 and int(data.month) <= 5:
-        update_employees_2018(data.indenizacoes[8:], employees)
+        update_employees_2018(data.indenizacoes, employees)
 
     elif int(data.year) == 2019 and int(data.month) > 5 or int(data.year) == 2020 and int(data.month) <= 4:
         update_employees_before(data.indenizacoes, employees)
