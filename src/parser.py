@@ -74,7 +74,7 @@ def create_remuneration(row, month, year):
     return remuneration_array
 
 
-def remunerations_after(row):
+def remunerations_2020_07(row):
     remuneration_array = Coleta.Remuneracoes()
     # VERBAS INDENIZATÓRIAS
     for key, value in HEADERS[VERBAS].items():
@@ -109,7 +109,7 @@ def remunerations_after(row):
             remuneration_array.remuneracao.append(remuneration)
     return remuneration_array
 
-
+# A planilha de indenizações de junho de 2020 possui menos colunas
 def remunerations_06_20(row):
     remuneration_array = Coleta.Remuneracoes()
     # VERBAS INDENIZATÓRIAS
@@ -133,7 +133,7 @@ def remunerations_06_20(row):
     return remuneration_array
 
 
-def remunerations_before(row):
+def remunerations_2019_2020(row):
     remuneration_array = Coleta.Remuneracoes()
     # VERBAS INDENIZATÓRIAS
     if not number.is_nan(row[4]) and row[4] != "N/A":
@@ -165,19 +165,6 @@ def remunerations_before(row):
         remuneration_array.remuneracao.append(rem)
     return remuneration_array
 
-
-def remunerations_05_20(head, row):
-    remuneration_array = Coleta.Remuneracoes()
-    for i in range(4, len(row)):
-        rem = Coleta.Remuneracao()
-        rem.natureza = Coleta.Remuneracao.Natureza.Value("R")
-        rem.categoria = "Verbas indenizatórias e outras remunerações temporárias"
-        rem.item = head[i]
-        rem.valor = float(number.format_value(row[i]))
-        rem.tipo_receita = Coleta.Remuneracao.TipoReceita.Value("O")
-        remuneration_array.remuneracao.append(rem)
-    return remuneration_array
-
 # A planilha mantém esse formato até 05/2019
 def remunerations_2018(row):
     remuneration_array = Coleta.Remuneracoes()
@@ -205,7 +192,20 @@ def update_employees_05_20(data, employees):
     return employees
 
 
-def update_employees_before(indenizacoes, employees):
+def remunerations_05_20(head, row):
+    remuneration_array = Coleta.Remuneracoes()
+    for i in range(4, len(row)):
+        rem = Coleta.Remuneracao()
+        rem.natureza = Coleta.Remuneracao.Natureza.Value("R")
+        rem.categoria = "Verbas indenizatórias e outras remunerações temporárias"
+        rem.item = head[i]
+        rem.valor = float(number.format_value(row[i]))
+        rem.tipo_receita = Coleta.Remuneracao.TipoReceita.Value("O")
+        remuneration_array.remuneracao.append(rem)
+    return remuneration_array
+
+# As planilhas seguem um padrão diferente a partir de junho de 2019 a abril de 2020
+def update_employees_2019_2020(indenizacoes, employees):
     for i in range(len(indenizacoes)):
         # As células referentes à matrícula são mescladas, retornando 'nan' na linha posterior.
         # Caso esta célula seja 'nan', ragistration receberá a matrícula informada na linha anterior.
@@ -216,13 +216,13 @@ def update_employees_before(indenizacoes, employees):
 
         if registration in employees.keys():
             emp = employees[registration]
-            remu = remunerations_before(indenizacoes[i])
+            remu = remunerations_2019_2020(indenizacoes[i])
             emp.remuneracoes.MergeFrom(remu)
             employees[registration] = emp
     return employees
 
-
-def update_employees_after(data, employees):
+# As planilhas seguem um padrão diferente a partir de junho de 2020
+def update_employees_2020_06(data, employees):
     for row in data.indenizacoes:
         registration = str(row[0])
         if registration in employees.keys():
@@ -231,12 +231,12 @@ def update_employees_after(data, employees):
             if int(data.year) == 2020 and int(data.month) == 6:
                 remu = remunerations_06_20(new_row)
             else:
-                remu = remunerations_after(new_row)
+                remu = remunerations_2020_07(new_row)
             emp.remuneracoes.MergeFrom(remu)
             employees[registration] = emp
     return employees
 
-
+# As planilhas de indenizações possuem um padrão de 2018 a maio de 2019
 def update_employees_2018(data, employees):
     for row in data:
         if 'Observações:' in str(row[0]) or 'Fonte' in str(row[0]):
@@ -264,14 +264,14 @@ def parse(data, colect_key):
         update_employees_2018(data.indenizacoes, employees)
 
     elif int(data.year) == 2019 and int(data.month) > 5 or int(data.year) == 2020 and int(data.month) <= 4:
-        update_employees_before(data.indenizacoes, employees)
+        update_employees_2019_2020(data.indenizacoes, employees)
 
     elif int(data.year) == 2020 and int(data.month) == 5:
         update_employees_05_20(data, employees)
 
-    # int(data.year) > 2020 or int(data.year) == 2020 and int(data.month) >= 6
+    # Período de referência: int(data.year) > 2020 or int(data.year) == 2020 and int(data.month) >= 6
     else:
-        update_employees_after(data, employees)
+        update_employees_2020_06(data, employees)
 
     for i in employees.values():
         payroll.contra_cheque.append(i)
