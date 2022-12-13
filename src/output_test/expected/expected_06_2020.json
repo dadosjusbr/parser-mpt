@@ -1,0 +1,96 @@
+{
+    "contraCheque": [
+        {
+            "idContraCheque": "mpt/06/2020/1",
+            "chaveColeta": "mpt/06/2020",
+            "nome": "ABIAEL FRANCO SANTOS",
+            "matricula": "376",
+            "funcao": "PROCURADOR REGIONAL DO TRABALHO",
+            "localTrabalho": "3º OFÍCIO GERAL DA PRT DA 15ª REGIÃO",
+            "ativo": true,
+            "remuneracoes": {
+                "remuneracao": [
+                    {
+                        "categoria": "Remuneração Básica",
+                        "item": "Remuneração do Cargo Efetivo",
+                        "valor": 35462.22
+                    },
+                    {
+                        "categoria": "Remuneração Básica",
+                        "item": "Outras Verbas Remuneratórias Legais ou Judiciais"
+                    },
+                    {
+                        "categoria": "Remuneração Eventual ou Temporária",
+                        "item": "Função de Confiança ou Cargo em Comissão"
+                    },
+                    {
+                        "categoria": "Remuneração Eventual ou Temporária",
+                        "item": "Gratificação Natalina"
+                    },
+                    {
+                        "categoria": "Remuneração Eventual ou Temporária",
+                        "item": "Férias (1/3 constitucional)"
+                    },
+                    {
+                        "categoria": "Remuneração Eventual ou Temporária",
+                        "item": "Abono de Permanência",
+                        "valor": 5834.9
+                    },
+                    {
+                        "natureza": "D",
+                        "categoria": "Obrigatórios / Legais",
+                        "item": "Contribuição Previdênciária",
+                        "valor": -5834.9
+                    },
+                    {
+                        "natureza": "D",
+                        "categoria": "Obrigatórios / Legais",
+                        "item": "Imposto de Renda",
+                        "valor": -8882.75
+                    },
+                    {
+                        "natureza": "D",
+                        "categoria": "Obrigatórios / Legais",
+                        "item": "Retenção por Teto Constitucional"
+                    },
+                    {
+                        "categoria": "Verbas Indenizatórias",
+                        "item": "Auxílio-Alimentação",
+                        "valor": 910.08,
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas Indenizatórias",
+                        "item": "Auxílio-Transporte",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Vencimento",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Paraná Banco",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Adicional de Insalubridade",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "Antecipação Rem. Mês Posterior",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Outras Remunerações Temporárias",
+                        "item": "SINTRAJUFE-MA",
+                        "tipoReceita": "O"
+                    }
+                ]
+            }
+        }
+    ]
+}

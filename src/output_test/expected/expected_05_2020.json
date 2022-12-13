@@ -1,0 +1,1066 @@
+{
+    "contraCheque": [
+        {
+            "idContraCheque": "mpt/05/2020/1",
+            "chaveColeta": "mpt/05/2020",
+            "nome": "ABIAEL FRANCO SANTOS",
+            "matricula": "376",
+            "funcao": "PROCURADOR REGIONAL DO TRABALHO",
+            "localTrabalho": "3º OFÍCIO GERAL DA PRT DA 15ª REGIÃO",
+            "ativo": true,
+            "remuneracoes": {
+                "remuneracao": [
+                    {
+                        "categoria": "Remuneração Básica",
+                        "item": "Remuneração do Cargo Efetivo",
+                        "valor": 35462.22
+                    },
+                    {
+                        "categoria": "Remuneração Básica",
+                        "item": "Outras Verbas Remuneratórias Legais ou Judiciais"
+                    },
+                    {
+                        "categoria": "Remuneração Eventual ou Temporária",
+                        "item": "Função de Confiança ou Cargo em Comissão"
+                    },
+                    {
+                        "categoria": "Remuneração Eventual ou Temporária",
+                        "item": "Gratificação Natalina"
+                    },
+                    {
+                        "categoria": "Remuneração Eventual ou Temporária",
+                        "item": "Férias (1/3 constitucional)"
+                    },
+                    {
+                        "categoria": "Remuneração Eventual ou Temporária",
+                        "item": "Abono de Permanência",
+                        "valor": 5834.9
+                    },
+                    {
+                        "natureza": "D",
+                        "categoria": "Obrigatórios / Legais",
+                        "item": "Contribuição Previdênciária",
+                        "valor": -5834.9
+                    },
+                    {
+                        "natureza": "D",
+                        "categoria": "Obrigatórios / Legais",
+                        "item": "Imposto de Renda",
+                        "valor": -8882.75
+                    },
+                    {
+                        "natureza": "D",
+                        "categoria": "Obrigatórios / Legais",
+                        "item": "Retenção por Teto Constitucional"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Auxílio-Alimentação",
+                        "valor": 910.08,
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Adicional Noturno",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Auxílio-Transporte",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Auxílio Moradia Isento de IR",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Auxílio Natalidade",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Auxílio  pré-Escolar",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Auxílio-Transporte Estagiário",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Vencimento",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Retribuição Concurso",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SINDJUFE-MS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "REPOSICAO M.P.D.F.T.",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ASSEMPU/GO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SINDMPU",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "CEF-Crédito Imobilíario",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "AJUT/SC",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ASEMPT-Lanches e Refeições",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ASEMPT-Auxílio",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ASEMPT-Artigo 59",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SINDSEP-PE",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Salário Maternidade-RGPS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "C.E.F. - CEARA -",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SINDSERF - Mensalidade -",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "A.S.E.M.P.T.",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "A.S.E.M.P.T. - TICKET -",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SINDSEF-SP",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ASSEMPU/GO - Empréstimo",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "APRESUL",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "S.A.S.Mensalidade",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ASMPF",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ASEMPT-UTI",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Salário Maternidade RGPS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "BEMFAZ/PR - Mensalidade",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "CES-CENTRO ESTUDO MPT/PR",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "TAXA OCUPACAO IM.FUNC.-MPT",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SINTSEF/CE",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SINDJUS/AL",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PARANA BANCO-Empréstimo",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "BANCO REAL - Empréstimo",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "CREDIJUSTRA-Mensalidade",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "CREDIJUSTRA-Empréstimo",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "BANCO ALFA",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SUBST.PROCURADORES.FC L.11415/06",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ASMPF - RJ",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "BCO CRUZEIRO DO SUL-EMPREST",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "BANCO SANTANDER - EmpréstimoS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "BBV/BRADESCO-Empréstimo",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ASSTTRA/AGEMPU",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "DEV. FERIAS ANTECIPADAS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "IND. FAZENDA (1)",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "IND. FAZENDA NACIONAL (2)",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "IND. FAZENDA NACIONAL (3)",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PENSAO ALIMENTICIA(Vencimento)",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SUBSIDIO - PROCURADOR GERAL",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PENSAO ALIMENTICIA (VALOR)",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PENSAO ALIMENT. (SAL MINIMO)",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PENSAO ALIM. GRAT.NATAL VALOR",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "AMPDFT",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "A.S.E.M.P.T (REQ/SV)",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "BANCO BMC / BRADESCO PROMOTORA",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ASP",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "BANCO CACIQUE S/A",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PLAN ASSISTE - RESSARCIMENTO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PLAN ASSISTE - CUSTEIO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "GAMPU L.9953/00-10476/02-11415/06-AT",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ASEMPT-CLUBE",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "INVESTPREV",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "BANCO DO BRASIL - EmpréstimoS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "BV - FINANCEIRA",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "BANCO GE EmpréstimoS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ANPT - COOMARCA",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PLAN ASSISTE- CONTRIB. ESPECIAIS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PLAN. ASSISTE - CONTRIB. PAIS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PLAN ASSISTE. CONTRIB. SUPLEMENTAR",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PLAN ASSISTE CONTRIB. TITULAR",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "GAMPU L.9953/00-10476/02-11415/06-IN",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PLAN ASSISTE - CUSTEIO ESPECIAIS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PLAN ASSISTE - CUSTEIO PAI e MAE",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PLAN ASSISTE - CONT. DEC. JUD.",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "REPOSICAO ESMPU",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PLAN ASSISTE CONTRIB. FILHO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "BANCO DAYCOVAL - S/A",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PLAN ASSISTE CONTRIB. CONJUGE",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PLAN ASSISTE CONTRIB. SEM VINCULO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "DEP.JUD-8ºJUIZADO ESP CIVEL CURITIBA-P:14450-08.2011",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "DESCONTO Auxílio-Transporte",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "GAMPU L.9953/00-10476/02-11415/06-IP",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "FALTAS/Vencimento",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PARTICIPAÇAO Auxílio pré-Escolar",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PARC. EXCEDENTE EC 41/03 - PENSÃO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "RET.TETO INATIVO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "RET.TETO ATIVO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "RET.TETO - PE",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "RET.TETO ATIVO - FÉRIAS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "RET.TETO ATIVO-FERIAS- 1/3",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "RET.TETO ATIVO-FERIAS- Abono",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "RET.TETO ATIVO - SUBST OFICIO E/OU FC-CC",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SUBST. FC/CC L.9953/00-10476/02-11415/06",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PENSAO ALIMENTICIA/BRUTO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PENSAO ALIMENTICIA/LIQUIDO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ADIANT.GRAT.NATAL/PENS.ALIM.",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PENSAO ALIMENTICIA FERIAS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ADIANT GRAT NATAL SAL MIN P.AL",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PSSS CORRECAO MONETARIA",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PREVIDENCIA SOCIAL - RGPS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "P.S.S.S. ESTATUTARIO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PSSS 13 Salário",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PREV. SOC. 13-Salário - RGPS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SUBSTITUICAO - CARGO EFETIVO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "P.S.S.S. INATIVO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "P.S.S.S - PEN CIV",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "P.S.S.S.  13 Salário PENSAO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "I.R. S/1/3 de FÉRIAS CONST.",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "IMPOSTO de RENDA",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "IMP. de RENDA/GRAT.NATAL",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "REPOSICAO I.R.  Abono",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PROVENTOS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "VANT.PECUNIARIA L.10698/03-AT",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "VANT.PECUNIARIA L.10698/03-IN",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "VANT.PECUNIARIA L.10698/03-IP",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SUBSIDIO-LEI 11.144/05 - ATIVO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SUBSIDIO-LEI 11.144/05 - INATIVO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SUBSIDIO-LEI 11.144/05-INAT PROV",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "GRAT. ATIV. SEGURANÇA L.11415/06",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ADIC.QUALIFICAÇÃO L.11415/06-AT",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ADIC.QUALIFICAÇÃO-L.11415/06-IN",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ADIC.QUALIFICAÇÃO-L.11415/06-IP",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Abono Provisório",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "CARGO COMISSÃO-INTEGRAL- L.11.415/06-IN",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "CARGO COMISSÃO-INTEGRAL-L.11.415/06-IP",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ATUAL.MONETÁRIA-ATIVO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ATUAL.MONETARIA-INATIVO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "CORRECAO MONETARIA - ATIVO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "JUROS - ATIVO (LP)",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "JUROS - INATIVO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Adicional de Periculosidade",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PROVENTOS EC41/03 ART40§§3º,8ºE17-IN",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Adicional de Insalubridade-53",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PROVENTOS EC41/03 ART40§§3º,8ºE17-IP",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "LIC.PREMIO-CONV.PECUNIA-ATIVO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SALDO EM BANCO de HORAS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "LIC.PREMIO-CONV. PECUNIA - IN",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ATUAL.MONETARIA-ATIVO (LP)",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "GRAT. de PERÍCIA - LEI N° 11.415/2006",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "GRAT.  de PROJETO - LEI N° 11415/2006",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Adicional - Ações de Treinamento",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ADIC. - Ações de Trein. SEM PSS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Adicional de Atividade Penosa",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "Adicional de Insalubridade-62",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "DOBRA de JORNADA",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "GRAT. PERÍCIA - LEI 11.415/06 - SEM PSS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "GRAT. PROJETO - LEI N° 11.415/2006 - SEM PSS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "GRAT. ATIV. SEG.  L.11415/06 - SEM PSS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ADIC.QUALIF.  L.11415/06-AT - SEM PSSS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "A.Q - Ações de Treinamento-1064",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "A.Q - Ações de Treinamento-1065",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "A.Q - Ações de Treinamento-1066",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "A.Q-Ações de Trein. S/PSS-1067",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "A.Q-Ações de Trein. S/PSS-1068",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ANTECIPAÇÃO REM. MÊS POSTERIOR",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "A.Q-Ações de Trein. S/PSS-1069",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PAGAMENTO_ESTAGIARIO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "RETRIBUIÇÃO Concurso -  INATIVO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "LIC.PREMIO-CONV. PECUNIA - CORREÇÃO-IN",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "LIC.PREMIO-CONV. PECUNIA - JUROS-IN",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "GRATIF. POR EXERCICIO CUMULATIVO de OFÍCIOS L.13024/14",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "GRATIF. POR EXERCICIO CUMULATIVO de OFÍCIOS SEM PSSS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SUBSTITUIÇÃO FC/CC - RGPS (REQ e S/V)",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PROVENTOS de PENSAO CIVIL",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "LIC.PREMIO-CONV.PECUNIA - PEN",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "REPOSICAO de VencimentoS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "GAMPU L.9953/00-10476/02-11415/06-PEN",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "VANT.PECUNIARIA L.10698/03-PEN",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SUBSIDIO-LEI 11.144/05- PENS CIVIL",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ATUAL.MONETARIA-PEN",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "JUROS - PENSAO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "PENSÃO CIVIL EC 41/2003-PEN",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SUCAD-SPU-TX.OCUPACAO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "GBOEX",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ASSEMPU/AM",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "FEDERAL de SEGUROS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "HORAS EXTRAS ESTAT.",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "CAPEMISA MENSAL",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "CAPEMISA PECULIO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "CEF - BRASILIA",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "CEF - SANTA CATARINA",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "CEF-MG-Empréstimo",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "UNICERV - TAXA",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "U.N.S.P.C .",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "A.N.P.T",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "A.N.P.T.-SEGURO SAUDE-",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "ABRASPEG",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "REPOSICAO de PROVENTOS",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "DESPESA TELEFONICA",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "REPOSICAO - MPF",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "A.S.C.B. - Mensalidade -",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SINDSEP-DF",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SINTRAJUFE-MA",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "MONGERAL - Mensalidade -",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "MONGERAL  - SEGURO",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "SINDJUS-DF",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "Verbas indenizatórias e outras remunerações temporárias",
+                        "item": "REPOSICAO MPDFT PLAN-ASSISTE",
+                        "tipoReceita": "O"
+                    }
+                ]
+            }
+        }
+    ]
+}
