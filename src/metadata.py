@@ -18,9 +18,12 @@ def catch(month, year):
     # A planilha de indenizações de maio de 2020 é diferente dos demais meses, tendo mais de 200 colunas.
     # A planilha de indenizações de junho de 2020 possui menos colunas
     # As planilhas seguem um padrão diferente a partir de junho de 2020
-    if year == 2020 and month in [5, 6, 7] or year == 2019 and month == 6:
+    if (year == 2020 and month in [5, 6, 7]) or (year == 2019 and month == 6) or (year == 2024 and month == 1):
         metadata.formato_consistente = False
     else:
         metadata.formato_consistente = True
+        
+    if year >= 2024:
+        metadata.estritamente_tabular = True
 
     return metadata
