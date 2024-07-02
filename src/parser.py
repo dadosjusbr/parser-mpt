@@ -1,5 +1,6 @@
 import number
 import re
+import numpy as np
 
 from coleta import coleta_pb2 as Coleta
 
@@ -165,6 +166,30 @@ def remunerations_2019_2020(row):
         remuneration_array.remuneracao.append(rem)
     return remuneration_array
 
+
+def remunerations_2024(row):
+    remuneration_array = Coleta.Remuneracoes()
+    # VERBAS INDENIZATÓRIAS
+    if not number.is_nan(row[4]) and row[4] != "N/A":
+        rem = Coleta.Remuneracao()
+        rem.natureza = Coleta.Remuneracao.Natureza.Value("R")
+        rem.categoria = "Verbas indenizatórias"
+        rem.item = row[4]
+        rem.valor = float(number.format_value(row[5]))
+        rem.tipo_receita = Coleta.Remuneracao.TipoReceita.Value("O")
+        remuneration_array.remuneracao.append(rem)
+    # OUTRAS REMUNERAÇÕES TEMPORÁRIAS
+    if not number.is_nan(row[6]) and row[6] != "N/A":
+        rem = Coleta.Remuneracao()
+        rem.natureza = Coleta.Remuneracao.Natureza.Value("R")
+        rem.categoria = "Outras Remunerações Temporárias"
+        rem.item = row[6]
+        rem.valor = float(number.format_value(row[7]))
+        rem.tipo_receita = Coleta.Remuneracao.TipoReceita.Value("O")
+        remuneration_array.remuneracao.append(rem)
+    return remuneration_array
+
+
 # A planilha mantém esse formato até 05/2019
 def remunerations_2018(row):
     remuneration_array = Coleta.Remuneracoes()
@@ -236,6 +261,24 @@ def update_employees_2020_06(data, employees):
             employees[registration] = emp
     return employees
 
+
+# As planilhas seguem um padrão diferente a partir de 2024
+def update_employees_2024(data, employees):
+    registration = np.nan
+    for row in data.indenizacoes:
+        if str(row[0]) != "nan":
+            registration = str(row[0])
+        if registration in employees.keys():
+            emp = employees[registration]
+            if int(data.year) == 2020 and int(data.month) == 6:
+                remu = remunerations_06_20(row)
+            else:
+                remu = remunerations_2024(row)
+            emp.remuneracoes.MergeFrom(remu)
+            employees[registration] = emp
+    return employees
+
+
 # As planilhas de indenizações possuem um padrão de 2018 a maio de 2019
 def update_employees_2018(data, employees):
     for row in data:
@@ -269,9 +312,10 @@ def parse(data, colect_key):
     elif int(data.year) == 2020 and int(data.month) == 5:
         update_employees_05_20(data, employees)
 
-    # Período de referência: int(data.year) > 2020 or int(data.year) == 2020 and int(data.month) >= 6
-    else:
+    elif (int(data.year) > 2020 and int(data.year) < 2024) or int(data.year) == 2020 and int(data.month) >= 6:
         update_employees_2020_06(data, employees)
+    else:
+        update_employees_2024(data, employees)
 
     for i in employees.values():
         payroll.contra_cheque.append(i)
