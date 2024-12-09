@@ -50,7 +50,10 @@ def create_remuneration(row, month, year):
         remuneration.item = key
         valor = re.sub("[R$] ?", "", row[value])  # Tirando o "R$" da string
         remuneration.valor = float(number.format_value(valor))
-        remuneration.tipo_receita = Coleta.Remuneracao.TipoReceita.Value("B")
+        if value == 3:
+            remuneration.tipo_receita = Coleta.Remuneracao.TipoReceita.Value("B")
+        else:
+            remuneration.tipo_receita = Coleta.Remuneracao.TipoReceita.Value("O")
         remuneration_array.remuneracao.append(remuneration)
     # REMUNERAÇÃO EVENTUAL OU TEMPORÁRIA
     for key, value in HEADERS[REM_EVENTUAL].items():
@@ -60,7 +63,7 @@ def create_remuneration(row, month, year):
         remuneration.item = key
         valor = re.sub("[R$] ?", "", row[value])  # Tirando o "R$" da string
         remuneration.valor = float(number.format_value(valor))
-        remuneration.tipo_receita = Coleta.Remuneracao.TipoReceita.Value("B")
+        remuneration.tipo_receita = Coleta.Remuneracao.TipoReceita.Value("O")
         remuneration_array.remuneracao.append(remuneration)
     # OBRIGATÓRIOS/LEGAIS
     for key, value in HEADERS[OBRIGATORIOS].items():
